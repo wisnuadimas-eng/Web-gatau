@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toko File HTML — template siap pakai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14213d;--paper:#f3f5f7;--blue:#2f5bff;--sun:#ffd84d;--line:#d5dbe3;--card:#fff}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Bricolage Grotesque',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{padding:20px 0;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:1.1rem;text-decoration:none}
+.logo span{background:var(--sun);padding:0 6px;border-radius:4px}
+.hero{padding:40px 0 56px;display:grid;gap:32px;grid-template-columns:1.1fr .9fr;align-items:center}
+h1{font-size:clamp(2.2rem,7vw,3.8rem);line-height:1.05;font-weight:800;letter-spacing:-.02em}
+.hero p{margin:18px 0 26px;max-width:46ch;font-size:1.05rem}
+.btn{display:inline-block;background:var(--blue);color:#fff;font-weight:600;text-decoration:none;padding:13px 22px;border-radius:10px;border:0;cursor:pointer;font:inherit;font-weight:600}
+.btn:hover{background:#1f45dd}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.code{background:var(--ink);color:#cdd7ee;border-radius:14px;padding:18px 20px;font-family:ui-monospace,Menlo,monospace;font-size:.85rem;line-height:1.7;overflow-x:auto;box-shadow:8px 8px 0 var(--sun)}
+.code i{font-style:normal;color:#8fb0ff}.code b{font-weight:400;color:var(--sun)}
+.bar{display:flex;gap:6px;margin-bottom:12px}.bar span{width:10px;height:10px;border-radius:50%;background:#42506f}
+h2{font-size:1.7rem;font-weight:800;margin-bottom:6px}
+.sub{margin-bottom:24px;color:#4a566e}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.card{background:var(--card);border:2px solid var(--ink);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.file{background:var(--ink);color:#fff;font-family:ui-monospace,Menlo,monospace;font-size:.8rem;padding:8px 14px}
+.body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h3{font-size:1.15rem}
+.body p{font-size:.95rem;color:#4a566e;flex:1}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;gap:10px}
+.price{font-weight:800;font-size:1.2rem}
+.row .btn{padding:10px 16px;font-size:.92rem}
+.prev{font-size:.88rem}
+section{padding:24px 0 40px}
+.steps{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 16px 16px 58px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:14px;width:32px;height:32px;border-radius:50%;background:var(--sun);font-weight:800;display:grid;place-items:center}
+footer{border-top:1px solid var(--line);padding:24px 0;font-size:.9rem;color:#4a566e}
+@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:16px}}
+@media(prefers-reduced-motion:no-preference){.btn{transition:background .15s}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#"><span>.html</span> Store</a>
+    <a href="#produk">Katalog</a>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>File HTML siap pakai, tinggal edit.</h1>
+      <p>Template website yang sudah jadi. Beli, terima file-nya lewat WhatsApp, ganti teks dan gambar, lalu upload ke hosting gratis.</p>
+      <a class="btn" href="#produk">Lihat katalog</a>
+    </div>
+    <div class="code" aria-hidden="true">
+      <div class="bar"><span></span><span></span><span></span></div>
+      <i>&lt;html&gt;</i><br>
+      &nbsp;&nbsp;<i>&lt;h1&gt;</i>Toko Kamu<i>&lt;/h1&gt;</i><br>
+      &nbsp;&nbsp;<b>&lt;!-- tinggal ganti isinya --&gt;</b><br>
+      <i>&lt;/html&gt;</i>
+    </div>
+  </div>
+
+  <section id="produk">
+    <h2>Katalog file</h2>
+    <p class="sub">Harga sekali bayar. File boleh dipakai untuk proyekmu sendiri.</p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section>
+    <h2>Cara beli</h2>
+    <p class="sub">Tanpa akun, tanpa ribet.</p>
+    <ol class="steps">
+      <li>Pilih file, lalu tekan <b>Beli via WhatsApp</b>.</li>
+      <li>Kirim pesan yang sudah terisi otomatis dan bayar sesuai arahan penjual.</li>
+      <li>Terima file HTML lewat WhatsApp dan langsung pakai.</li>
+    </ol>
+  </section>
+
+  <footer>© 2026 .html Store. Setiap pembelian dikonfirmasi lewat WhatsApp.</footer>
+</div>
+
+<script>
+// ====== EDIT BAGIAN INI ======
+// Nomor WhatsApp penjual, format internasional tanpa + (contoh: 6281234567890)
+const WA = "6281234567890";
+
+// Daftar produk. Tambah/hapus/ubah sesuai kebutuhan.
+// preview: isi link demo (misal "demo/landing.html"), atau kosongkan "".
+const products = [
+  { file: "landing-umkm.html",  name: "Landing Page UMKM",     price: 35000, desc: "Satu halaman untuk promosi usaha: hero, produk, kontak WhatsApp.", preview: "" },
+  { file: "katalog-produk.html", name: "Katalog Produk",        price: 50000, desc: "Daftar produk berbentuk kartu dengan tombol chat penjual.",       preview: "" },
+  { file: "portofolio.html",     name: "Portofolio Pribadi",    price: 40000, desc: "Halaman profil, proyek, dan kontak untuk mahasiswa atau freelancer.", preview: "" },
+  { file: "undangan.html",       name: "Undangan Digital",      price: 45000, desc: "Undangan acara dengan countdown dan peta lokasi.",               preview: "" }
+];
+// ====== SELESAI ======
+
+const rp = n => "Rp" + n.toLocaleString("id-ID");
+const grid = document.getElementById("grid");
+products.forEach(p => {
+  const msg = encodeURIComponent(`Halo, saya mau beli file ${p.file} (${p.name}) seharga ${rp(p.price)}.`);
+  const el = document.createElement("article");
+  el.className = "card";
+  el.innerHTML = `
+    <div class="file">${p.file}</div>
+    <div class="body">
+      <h3></h3><p></p>
+      ${p.preview ? `<a class="prev" href="${p.preview}" target="_blank" rel="noopener">Lihat preview</a>` : ""}
+      <div class="row">
+        <span class="price">${rp(p.price)}</span>
+        <a class="btn" href="https://wa.me/${WA}?text=${msg}" target="_blank" rel="noopener">Beli via WhatsApp</a>
+      </div>
+    </div>`;
+  el.querySelector("h3").textContent = p.name;
+  el.querySelector("p").textContent = p.desc;
+  grid.appendChild(el);
+});
+</script>
+</body>
+</html>
